@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="coralMar">CoralMar</string>
+    <string name="login">Iniciar Sesión</string>
+    <string name="botónRegistro">Registrarse</string>
+    <string name="Registrarse">Registro</string>
+    <string name="InicioSesion">Inicar Sessión</string>
+</resources>

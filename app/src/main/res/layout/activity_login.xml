@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Login">
+
+
+    <ImageView
+        android:id="@+id/fondoLogin"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+    <TextView
+        android:id="@+id/iniciarSesionText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="500dp"
+        android:text="@string/InicioSesion"
+        android:textColor="@color/design_default_color_primary"
+        android:fontFamily="@font/oceanoestilo"
+
+
+
+
+        android:textSize="35dp"
+        android:textStyle="italic"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:layout_width="85dp"
+        android:layout_height="85dp"
+        android:layout_marginBottom="350dp"
+        android:src="@drawable/imagen3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/Gl1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.12" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/Gl2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.87" />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/usuario"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/Gl2"
+        app:layout_constraintStart_toStartOf="@id/Gl1"
+        app:layout_constraintTop_toTopOf="parent"
+
+
+        >
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="NombreDeUsuario"
+            android:inputType="textPersonName"
+
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+
+        android:id="@+id/password"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        app:layout_constraintEnd_toEndOf="@id/Gl2"
+        app:layout_constraintStart_toStartOf="@id/Gl1"
+
+        app:layout_constraintTop_toBottomOf="@id/usuario"
+        app:passwordToggleEnabled="true"
+
+        >
+
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Contraseña"
+            android:inputType="textPassword"
+
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/BotónInicioSesion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="Iniciar Sesión"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/password"/>
+
+
+
+    <TextView
+
+        android:id="@+id/accederLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="¿Aún no tienes una cuenta ? pulsa aquí para registrarte"
+        android:fontFamily="@font/oceanoestilo"
+        android:textColor="@color/material_dynamic_secondary40"
+        app:layout_constraintEnd_toEndOf="@id/Gl2"
+        app:layout_constraintStart_toStartOf="@id/Gl1"
+        app:layout_constraintTop_toBottomOf="@id/BotónInicioSesion"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_marginTop="25dp"/>
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

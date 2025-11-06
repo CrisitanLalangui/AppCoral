@@ -1,0 +1,71 @@
+
+
+Explicación del programa:
+
+
+
+""java""
+
+En el SplashScreen se ha creado  una ventana, para mostrar el arraqnque de la aplicación
+
+ #Aquí se delcaran los elementos
+
+        imagenLogo = findViewById(R.id.imagenLogoPrinciapl);
+        nombreApp = findViewById(R.id.CoralTExto);
+        fondo = findViewById(R.id.splash);
+
+#Aqui se crea la animación implementando su dependencia
+        Animation animation = AnimationUtils.loadAnimation(this, R.anim.aparecer);
+        imagenLogo.startAnimation(animation);
+        nombreApp.startAnimation(animation);
+
+# se implementa la dependencia de glide, para mostrar un fondo cualquiera dadndo permisos de internet
+        Glide.with(this)
+                .load("https://concepto.de/wp-content/uploads/2018/09/oc%C3%A9ano-e1537912452874.jpg")
+                .transition(DrawableTransitionOptions.withCrossFade(1000))
+                .centerCrop()
+                .into(fondo);
+
+        launchNextActivity(); // Pasa  a la siguiente actividad
+
+
+""layout""
+
+
+#Creación de un imageview donde se visuzliará lo del Glide"
+    <ImageView
+        android:id="@+id/splash"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.9"
+         />
+
+
+""Aqúí va la imagen del logo cactus"
+    <ImageView
+        android:id="@+id/imagenLogoPrinciapl"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_marginBottom="324dp"
+        android:src="@drawable/cactus2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent" />
+
+"Aquí va el texto del logo"
+    <TextView
+        android:id="@+id/CoralTExto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/coralMar"
+        android:textSize="50sp"
+        android:fontFamily="@font/oceanoestilo"
+        android:textStyle="bold"
+        android:textColor="@color/design_default_color_secondary_variant"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imagenLogoPrinciapl"
+
+        android:layout_marginTop="60sp"
+        />
