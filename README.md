@@ -54,4 +54,8 @@ El segundo texto hace referencia, a un saludo, dirigiéndose, al nombre de usuar
 
 
 
-![image alt](https://github.com/CrisitanLalangui/MIPrimeraApp/blob/da926d103658ef60beb3970cb5fc9027a5f0f24e/reigistroConerroes.png)
+![image alt](https://github.com/CrisitanLalangui/AppCoral/blob/master/capturra1.png)
+
+
+
+
