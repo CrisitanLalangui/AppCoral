@@ -22,7 +22,6 @@ public class Peces extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
 
-
         View rootView = inflater.inflate(R.layout.fragment_peces, container, false);
 
 
@@ -57,10 +56,9 @@ public class Peces extends Fragment {
     }
     public void mostrarDialogoAlerta() {
 
-
         new AlertDialog.Builder(getContext())
                 .setTitle("Animal")
-                .setMessage("Esto es un animal")
+                .setMessage("Esto es un animal ")
                 .setPositiveButton("Aceptar", (dialog, which) -> {
                     Toast.makeText(getContext(), "Botón positivo", Toast.LENGTH_SHORT).show();
                 })
