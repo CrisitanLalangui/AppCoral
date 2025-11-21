@@ -2,7 +2,8 @@ MI primera aplicacion
 
 
 
-En este código se ha creado una  aplicación desde cero, poniendo en práctica tanto su estilo funcional como su visual, se ha puesto en prácica la importación de dependencias
+En este código se ha creado una  aplicación desde cero, poniendo en práctica tanto su estilo funcional como su visual, se ha puesto en prácica la importación de dependencias, así como de distintos 
+componentes de lógica y de estilo visual, durante el desarrollo de esta aplicación también se ha llevado a cabo el uso de nuevas librerias.
 
 
 Lo primero que se ha hecho es el Splash Screen, para ello hemos añadido la dependencia Glit, que nos permitirá ver una imagen con acceso a internet, dandoles permisos
@@ -49,3 +50,8 @@ En main tenemos dos textos, el primer significa el tiempo total que nos ha lleva
 El segundo texto hace referencia, a un saludo, dirigiéndose, al nombre de usuario que ha escrito la persona que accedió a la aplicación.
 
 ![image alt](https://github.com/CrisitanLalangui/MIPrimeraApp/blob/9bb4c019a88bcbedc0b8ff6072591a9561fd34ea/main.png)
+
+
+
+
+![image alt](https://github.com/CrisitanLalangui/MIPrimeraApp/blob/da926d103658ef60beb3970cb5fc9027a5f0f24e/reigistroConerroes.png)
