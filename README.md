@@ -59,3 +59,9 @@ El segundo texto hace referencia, a un saludo, dirigiéndose, al nombre de usuar
 
 
 
+En esta sección lo que ocurre es que nos lleva a un main con la parte principal, donde en la parte de arriba nos muestra un saludo al usuario y más abajo otro titulo que nos muestra en milisegundos cuanto tiempo hemos tardado en loguearnos
+![image alt](https://github.com/CrisitanLalangui/AppCoral/blob/master/capturra1.png)
+
+
+
+
