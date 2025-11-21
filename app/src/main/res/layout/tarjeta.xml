@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_marginTop="25dp"
+        android:id="@+id/cardview1"
+        android:layout_width="350dp"
+        android:layout_height="200dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:cardCornerRadius="35dp"
+        android:background="#EBFA29"
+        app:cardBackgroundColor="#DBF71E"
+        >
+
+
+
+        <ImageView
+            android:id="@+id/imagentarjeta"
+            android:layout_width="130dp"
+            android:layout_height="120dp"
+            android:src="@drawable/girafa"
+
+            />
+
+        <TextView
+            android:layout_marginLeft="140dp"
+            android:id="@+id/textviewTarjeta"
+            android:layout_width="200dp"
+            android:layout_height="123dp"
+            android:text="Girafa"
+            android:textSize="25dp"/>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardwiew2"
+        android:layout_width="350dp"
+        android:layout_height="200dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cardview1"
+        app:cardCornerRadius="35dp"
+        android:background="#FFA500"
+        app:cardBackgroundColor="#FFA500"
+
+        android:layout_marginTop="25dp"
+        >
+
+
+
+        <ImageView
+            android:id="@+id/imagentarjeta2"
+            android:layout_width="130dp"
+            android:layout_height="120dp"
+            android:src="@drawable/leon"
+            android:paddingRight="15dp"
+            android:paddingBottom="5dp"
+
+
+            />
+
+        <TextView
+            android:layout_marginLeft="140dp"
+            android:id="@+id/textviewTarjeta2"
+            android:layout_width="200dp"
+            android:layout_height="123dp"
+            android:text="León de Montaña"
+            android:textSize="25dp"/>
+
+
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardwiew3"
+        android:layout_width="350dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="25dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cardwiew2"
+        app:cardCornerRadius="35dp"
+        android:background="#EBFA29"
+        app:cardBackgroundColor="#2FDAFA"
+        >
+
+
+        <ImageView
+            android:id="@+id/imagentarjeta3"
+            android:layout_width="130dp"
+            android:layout_height="120dp"
+            android:src="@drawable/iconocamaleon"
+            android:paddingRight="15dp"
+            android:paddingBottom="5dp"
+
+            />
+
+        <TextView
+            android:layout_marginLeft="140dp"
+            android:id="@+id/textviewTarjeta3"
+            android:layout_width="200dp"
+            android:layout_height="123dp"
+            android:text="Camaleón"
+            android:textSize="25dp"/>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

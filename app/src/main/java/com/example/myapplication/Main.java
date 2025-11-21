@@ -8,8 +8,15 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import androidx.viewpager.widget.ViewPager;
+
+import com.example.myapplication.databinding.ActivityMainBinding;
+import com.example.myapplication.frmanager.Paginador;
 
 public class Main extends AppCompatActivity {
+
+
+    private ActivityMainBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,27 +29,46 @@ public class Main extends AppCompatActivity {
             return insets;
         });
 
+        binding = ActivityMainBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
 
-        TextView textoMain = findViewById(R.id.tiempoTranscurrido);
+
+        Paginador paginador = new Paginador(this,getSupportFragmentManager());
+
+        ViewPager viewPager = binding.aplicacionViewPager;
+        viewPager.setAdapter(paginador);
+
+
+        TextView textoMain = findViewById(R.id.encabezado2);
 
 
         Bundle bundle = getIntent().getExtras();
 
         String tiempoTranscurrido = String.valueOf(bundle.getLong("tiempoinvertido"));
 
-        textoMain.setText(tiempoTranscurrido + " milisegundos en haber relleanado el login");
+        textoMain.setText("Tiempo Login: " + tiempoTranscurrido + " ms");
 
 
 
 
-        TextView texto2Main = findViewById(R.id.saludoUsuario);
+        TextView texto2Main = findViewById(R.id.encabezado);
 
 
         Bundle bundle2 = getIntent().getExtras();
 
         String saludo = bundle2.getString("nombreFinal");
 
-        texto2Main.setText("Bienvenido a mi aplicación: " + saludo);
+        texto2Main.setText("Bienvenido " + saludo);
+
+
+
+
+
+
+
+
+
+
 
 
 

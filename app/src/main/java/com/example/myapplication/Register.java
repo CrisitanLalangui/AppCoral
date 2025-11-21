@@ -40,7 +40,6 @@ public class Register extends AppCompatActivity {
         Button botonregistro;
 
 
-
         nombreUsuario = findViewById(R.id.usuario);
         passwordregister = findViewById(R.id.password);
         confirmPasswordregister = findViewById(R.id.confirmPassword);
@@ -54,9 +53,6 @@ public class Register extends AppCompatActivity {
         SharedPreferences.Editor editor = sharedPref.edit();
 
 
-
-
-
         accedeRegistro.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -68,12 +64,11 @@ public class Register extends AppCompatActivity {
         });
 
 
-
         botonregistro.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                boolean continuar= true;
+                boolean continuar = true;
 
                 String password1 = passwordregister.getEditText().getText().toString();
                 String passworrd2 = confirmPasswordregister.getEditText().getText().toString();
@@ -81,7 +76,7 @@ public class Register extends AppCompatActivity {
                 String email = mail.getEditText().getText().toString();
 
 
-                if (campoVacio(password1) || campoVacio(passworrd2)){
+                if (campoVacio(password1) || campoVacio(passworrd2)) {
 
                     confirmPasswordregister.setErrorEnabled(true);
                     passwordregister.setErrorEnabled(true);
@@ -92,10 +87,10 @@ public class Register extends AppCompatActivity {
 
                 }
 
-                if (!campoVacio(password1) && !campoVacio(passworrd2)){
+                if (!campoVacio(password1) && !campoVacio(passworrd2)) {
 
 
-                    if (!passwordIguales(password1,passworrd2)){
+                    if (!passwordIguales(password1, passworrd2)) {
 
                         confirmPasswordregister.setEnabled(true);
                         confirmPasswordregister.setError("Las contraseñas no coinciden");
@@ -107,21 +102,21 @@ public class Register extends AppCompatActivity {
 
                 }
 
-                if (campoVacio(usuario)){
+                if (campoVacio(usuario)) {
                     nombreUsuario.setErrorEnabled(true);
                     nombreUsuario.setError("el nombre de usuario no puede estar vacío");
                     continuar = false;
                 }
 
-                if (campoVacio(email)){
+                if (campoVacio(email)) {
                     mail.setErrorEnabled(true);
                     mail.setError("el  email no puede  estar vacío");
                     continuar = false;
                 }
 
-                if (!campoVacio(email)){
+                if (!campoVacio(email)) {
 
-                    if(!comprobarMail(email)){
+                    if (!comprobarMail(email)) {
 
                         mail.setErrorEnabled(true);
                         mail.setError("el formato del email es incorrecto");
@@ -131,14 +126,14 @@ public class Register extends AppCompatActivity {
 
                 }
 
-                if (continuar){
+                if (continuar) {
 
                     Intent intentregister = new Intent(Register.this, Login.class);
                     startActivity(intentregister);
 
                     editor.putString("userName", String.valueOf(nombreUsuario.getEditText().getText()));// Guardar los cambios
                     editor.putString("email", String.valueOf(mail.getEditText().getText()));
-                    editor.putString("password",generateHashedPassword(password1)); // Método para cifrar la contraseña
+                    editor.putString("password", generateHashedPassword(password1)); // Método para cifrar la contraseña
                     editor.apply(); // Aplicar los cambios
                     Intent intentMain = new Intent(Register.this, Login.class);
                     startActivity(intentMain);
@@ -146,51 +141,49 @@ public class Register extends AppCompatActivity {
 
             }
 
-            public boolean passwordIguales(String password1,String password2){
+            public boolean passwordIguales(String password1, String password2) {
 
-                boolean iguales= true;
-                if (!password1.equals(password2)){
+                boolean iguales = true;
+                if (!password1.equals(password2)) {
 
                     iguales = false;
                 }
 
 
-
                 return iguales;
-
 
 
             }
 
-            public  boolean campoVacio(String campo){
+            public boolean campoVacio(String campo) {
 
                 boolean estaVacio = false;
 
-                if ( campo.isBlank()){
+                if (campo.isBlank()) {
 
                     estaVacio = true;
 
                 }
 
-                if ( campo.isEmpty() ){
+                if (campo.isEmpty()) {
                     estaVacio = true;
                 }
-
 
 
                 return estaVacio;
 
 
             }
-            public  String generateHashedPassword(String password) {
+
+            public String generateHashedPassword(String password) {
                 return BCrypt.hashpw(password, BCrypt.gensalt());
             }
 
-            public boolean comprobarMail(String mail){
+            public boolean comprobarMail(String mail) {
 
                 boolean mailCorrecto = true;
 
-                if( !mail.contains("@")){
+                if (!mail.contains("@")) {
 
 
                     mailCorrecto = false;
@@ -198,14 +191,6 @@ public class Register extends AppCompatActivity {
                 return mailCorrecto;
             }
         });
-
-
-
-
-
-
-
-
 
 
     }

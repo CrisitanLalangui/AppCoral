@@ -25,6 +25,10 @@ android {
             )
         }
     }
+
+    buildFeatures {
+        viewBinding = true // Introducir la implmentación, de viewbinding
+    }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
